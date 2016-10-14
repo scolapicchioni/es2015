@@ -1,7 +1,11 @@
 module.exports = {
-    entry : "./wwwroot/js/src/test01.js",
+    entry : {
+        main: "./wwwroot/js/src/Main.js",
+        lab09: ['babel-polyfill',"./wwwroot/js/src/lab09.js"],
+        lab12: ['babel-polyfill',"./wwwroot/js/src/lab12.js"]
+    },
     output: {
-        filename: "./wwwroot/js/lib/bundle.js"
+        filename: "./wwwroot/js/lib/[name].js"
     },
     module: {
         loaders: [
